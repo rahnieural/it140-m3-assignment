@@ -11,14 +11,23 @@
 START paycheck_calculator
 
     TODO: Obtain the required program input.
+PRINT "Enter the total hours worked:"
+INPUT hours_worked
 
     IF TODO: Specify the condition for the applicable pay rule.
+IF hours_worked <= 40 THEN    
         TODO: List the processing steps for the true decision path.
+     LET gross_pay = hours_worked * 20
     ELSE
         TODO: List the processing steps for the false decision path.
+     LET regular_pay = 40 * 20
+     LET overtime_hours = hours_worked - 40
+     LET overtime_pay = overtime_hours * 30
+     LET gross_pay = regular_pay + overtime_pay
     ENDIF
 
     TODO: Output the calculated weekly paycheck.
+PRINT "Your total weekly paycheck is: " + gross_pay
 
 END paycheck_calculator
 
